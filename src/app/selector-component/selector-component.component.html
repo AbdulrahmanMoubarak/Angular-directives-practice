@@ -1,0 +1,43 @@
+<p>Please select Your favoriate Desert</p>
+
+<input type="radio" name="desert" id="ice" value="ice" [(ngModel)]="choice" />
+<label for="ice">Ice Cream</label><br />
+
+<input type="radio" name="desert" id="Cake" value="Cake" [(ngModel)]="choice" />
+<label for="ice">Cake</label><br />
+
+<input
+  type="radio"
+  name="desert"
+  id="drink"
+  value="drink"
+  [(ngModel)]="choice"
+/>
+<label for="ice">Drinks</label><br />
+
+<div *ngIf="choice === 'ice'">
+  <select>
+    <option value="Choose">Please choose one</option>
+    <option value="Vanillia">Vanillia</option>
+    <option value="Chocolate">Chocolate</option>
+    <option value="Strawberries">Strawberries</option>
+  </select>
+</div>
+
+<div *ngIf="choice === 'Cake'">
+  <select>
+    <option value="Choose">Please choose one</option>
+    <option value="Cream">Cream Cake</option>
+    <option value="Mango">Mango Cake</option>
+    <option value="Chocolate">Chocolate Cake</option>
+  </select>
+</div>
+
+<div *ngIf="choice === 'drink'">
+  <select>
+    <option value="Choose">Please choose one</option>
+    <option value="Pepsi">Pepsi</option>
+    <option value="Coffee">Coffee</option>
+    <option value="Cola">Cola</option>
+  </select>
+</div>
